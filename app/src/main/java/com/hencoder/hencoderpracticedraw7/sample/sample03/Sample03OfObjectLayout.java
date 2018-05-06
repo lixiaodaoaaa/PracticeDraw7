@@ -52,11 +52,12 @@ public class Sample03OfObjectLayout extends RelativeLayout {
 
         @Override
         public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
-            float x = startValue.x + (fraction * (endValue.x - startValue.x));
-            float y = startValue.y + (fraction * (endValue.y - startValue.y));
-
-            newPoint.set(x, y);
-
+        
+            
+            float pointX  = startValue.x + fraction * (endValue.x-startValue.x);
+            float pointY  = startValue.y + fraction * (endValue.y-startValue.y);
+            
+            newPoint.set(pointX,pointY);
             return newPoint;
         }
     }
